@@ -1,0 +1,32 @@
+mixin pokemonCard(pokemoncard)
+
+    div.card
+        div.edit
+            a(href=`/edit/${pokemoncard.id}`) Edit
+        div.heading
+            p.name=pokemoncard.name
+            p.health=pokemoncard.health
+            img.type(src=pokemoncard.type)
+
+        img.pokemonPicture(src=pokemoncard.pokemonPicture)
+
+        div.description1
+            img.energy1(src=pokemoncard.type)
+            div.move1=pokemoncard.move1
+            div.number1=pokemoncard.number1
+
+        div.description2
+            img.energy2(src=pokemoncard.type)
+            div.move2=pokemoncard.move2
+            div.number2=pokemoncard.number2
+
+        div.otherInfo
+            p.weakness weakness
+            p.resistance resistance
+            p.retreatCost retreat cost
+
+        div.otherInfoImg
+            img.weaknessImg(src=pokemoncard.type)
+            img.resistanceImg(src=pokemoncard.type)
+            img.retreatCostImg(src=pokemoncard.type)
+

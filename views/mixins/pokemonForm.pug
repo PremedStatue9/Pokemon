@@ -1,0 +1,52 @@
+mixin pokemonForm(pokemoncard, actionURL, mode, title)
+
+    div.form-panel
+        div.header= title
+            form(action=actionURL medthod='post')
+                div.form-input
+                    label(for='name') Name:
+                    input(type='text' id='name' name='name' value=pokemoncard.name)
+                div.form-input
+                    label(for='health') Health:
+                    input(type='text' id='health' name='health' value=pokemoncard.health)
+                div.form-input
+                    label(for='imageType') Type URL:
+                    input(type='text' id='imageType' name='type' value=pokemoncard.type)
+                div.form-input
+                    label(for='pokemonPicture') Pokemon Image URL:
+                    input(type='text' id='pokemonPicture' name='pokemonPicture' value=pokemoncard.pokemonPicture)
+                div.form-input
+                    label(for='energy1Image') Energy 1 Image URL:
+                    input(type='text' id='energy1Image' name='energy1' value=pokemoncard.energy1)
+                div.form-input
+                    label(for='move1') Name of move 1:
+                    input(type='text' id='move1' name='move1' value=pokemoncard.move1)
+                div.form-input
+                    label(for='number1') Number 1:
+                    input(type='text' id='number1' name='number1' value=pokemoncard.number1)
+                div.form-input
+                    label(for='energy2Image') Energy 2 Image URL:
+                    input(type='text' id='energy2Image' name='energy1' value=pokemoncard.energy2)
+                div.form-input
+                    label(for='move2') Name of move 2:
+                    input(type='text' id='move2' name='move2' value=pokemoncard.move2)
+                div.form-input
+                    label(for='number2') Number 2:
+                    input(type='text' id='number2' name='number2' value=pokemoncard.number2)
+                div.form-input
+                    label(for='weaknessImg') Weakness URL:
+                    input(type='text' id='weaknessImg' name='weaknessImg' value=pokemoncard.weaknessImg)
+                div.form-input
+                    label(for='resistanceImg') Resistance URL:
+                    input(type='text' id='resistanceImg' name='resistanceImg' value=pokemoncard.resistanceImg)
+                div.form-input
+                    label(for='retreatCostImg') Retreat Cost URL:
+                    input(type='text' id='retreatCostImg' name='retreatCostImg' value=pokemoncard.retreatCostImg)
+                div.button-row
+                    a.button.cancel(href='/') Cancel
+                    if (mode==='edit')
+                        a.button.delete(href=`/delete/${pokemoncard.id}`) Delete
+                    button.button.save(type='submit') Submit
+
+
+
